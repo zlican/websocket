@@ -1,0 +1,23 @@
+// protoc --go_out=. --go-grpc_out=. message.proto
+syntax = "proto3";
+
+package websocket;
+
+option go_package = "./pb";
+
+message Request {
+  string RequestId = 1 [json_name = "request_id"];
+  string Event = 2 [json_name = "event"];
+  string Request = 3 [json_name = "request"];
+  bytes Data = 4 [json_name = "data"];
+}
+
+message Respond {
+  string RequestId = 1 [json_name = "request_id"];
+  string Event = 2 [json_name = "event"];
+  uint32 Code = 3 [json_name = "code"];
+  string Message = 4 [json_name = "message"];
+  string Content = 5 [json_name = "content"];
+}
+
+

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="1200" height="900" viewBox="0 0 1200 900">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#000" />
+    </marker>
+  </defs>
+  <!-- 背景和泳道 -->
+  <rect x="0" y="0" width="1200" height="900" fill="#f7f7f7" />
+  
+  <!-- 泳道标题 -->
+  <rect x="0" y="0" width="200" height="80" fill="#4472c4" />
+  <text x="100" y="45" font-family="Arial" font-size="16" fill="white" text-anchor="middle">客户端</text>
+  
+  <rect x="200" y="0" width="200" height="80" fill="#5b9bd5" />
+  <text x="300" y="45" font-family="Arial" font-size="16" fill="white" text-anchor="middle">Upgrade</text>
+  
+  <rect x="400" y="0" width="200" height="80" fill="#70ad47" />
+  <text x="500" y="45" font-family="Arial" font-size="16" fill="white" text-anchor="middle">ClientManager</text>
+  
+  <rect x="600" y="0" width="200" height="80" fill="#ed7d31" />
+  <text x="700" y="45" font-family="Arial" font-size="16" fill="white" text-anchor="middle">Client</text>
+  
+  <rect x="800" y="0" width="200" height="80" fill="#ffc000" />
+  <text x="900" y="45" font-family="Arial" font-size="16" fill="white" text-anchor="middle">消息处理器</text>
+  
+  <rect x="1000" y="0" width="200" height="80" fill="#a5a5a5" />
+  <text x="1100" y="45" font-family="Arial" font-size="16" fill="white" text-anchor="middle">路由与业务逻辑</text>
+  
+  <!-- 泳道分隔线 -->
+  <line x1="200" y1="0" x2="200" y2="900" stroke="#ccc" stroke-width="2" />
+  <line x1="400" y1="0" x2="400" y2="900" stroke="#ccc" stroke-width="2" />
+  <line x1="600" y1="0" x2="600" y2="900" stroke="#ccc" stroke-width="2" />
+  <line x1="800" y1="0" x2="800" y2="900" stroke="#ccc" stroke-width="2" />
+  <line x1="1000" y1="0" x2="1000" y2="900" stroke="#ccc" stroke-width="2" />
+  
+  <!-- 横向分隔线 -->
+  <line x1="0" y1="80" x2="1200" y2="80" stroke="#ccc" stroke-width="2" />
+  
+  <!-- 工作流程 -->
+  <!-- 1. 客户端连接请求 -->
+  <rect x="50" y="120" width="100" height="50" rx="5" ry="5" fill="#d6e7ff" stroke="#4472c4" stroke-width="1" />
+  <text x="100" y="150" font-family="Arial" font-size="12" text-anchor="middle">发起连接</text>
+  
+  <line x1="150" y1="145" x2="230" y2="145" stroke="#000" stroke-width="1.5" marker-end="url(#arrowhead)" />
+  
+  <!-- 2. Upgrade处理连接请求 -->
+  <rect x="250" y="120" width="100" height="50" rx="5" ry="5" fill="#d6eaf8" stroke="#5b9bd5" stroke-width="1" />
+  <text x="300" y="142" font-family="Arial" font-size="12" text-anchor="middle">握手</text>
+  <text x="300" y="158" font-family="Arial" font-size="12" text-anchor="middle">协议升级</text>
+  
+  <line x1="300" y1="170" x2="300" y2="210" stroke="#000" stroke-width="1.5" marker-end="url(#arrowhead)" />
+  
+  <!-- 3. 创建Client实例 -->
+  <rect x="250" y="210" width="100" height="50" rx="5" ry="5" fill="#d6eaf8" stroke="#5b9bd5" stroke-width="1" />
+  <text x="300" y="232" font-family="Arial" font-size="12" text-anchor="middle">创建</text>
+  <text x="300" y="248" font-family="Arial" font-size="12" text-anchor="middle">Client实例</text>
+  
+  <line x1="350" y1="235" x2="450" y2="235" stroke="#000" stroke-width="1.5" marker-end="url(#arrowhead)" />
+  
+  <!-- 4. 注册Client到Manager -->
+  <rect x="450" y="210" width="100" height="50" rx="5" ry="5" fill="#d8f1cc" stroke="#70ad47" stroke-width="1" />
+  <text x="500" y="232" font-family="Arial" font-size="12" text-anchor="middle">注册</text>
+  <text x="500" y="248" font-family="Arial" font-size="12" text-anchor="middle">客户端</text>
+  
+  <line x1="500" y1="260" x2="500" y2="300" stroke="#000" stroke-width="1.5" marker-end="url(#arrowhead)" />
+  
+  <!-- 5. 启动Client服务 -->
+  <rect x="650" y="210" width="100" height="50" rx="5" ry="5" fill="#fad8c0" stroke="#ed7d31" stroke-width="1" />
+  <text x="700" y="232" font-family="Arial" font-size="12" text-anchor="middle">启动Read</text>
+  <text x="700" y="248" font-family="Arial" font-size="12" text-anchor="middle">Write等服务</text>
+  
+  <line x1="350" y1="235" x2="630" y2="235" stroke="#000" stroke-width="1.5" marker-end="url(#arrowhead)" />
+  
+  <!-- 6. ClientManager维护连接池 -->
+  <rect x="450" y="300" width="100" height="50" rx="5" ry="5" fill="#d8f1cc" stroke="#70ad47" stroke-width="1" />
+  <text x="500" y="322" font-family="Arial" font-size="12" text-anchor="middle">维护</text>
+  <text x="500" y="338" font-family="Arial" font-size="12" text-anchor="middle">连接池</text>
+  
+  <!-- 7. 客户端发送消息 -->
+  <rect x="50" y="350" width="100" height="50" rx="5" ry="5" fill="#d6e7ff" stroke="#4472c4" stroke-width="1" />
+  <text x="100" y="372" font-family="Arial" font-size="12" text-anchor="middle">发送消息</text>
+  <text x="100" y="388" font-family="Arial" font-size="12" text-anchor="middle">(JSON/Proto)</text>
+  
+  <line x1="150" y1="375" x2="630" y2="375" stroke="#000" stroke-width="1.5" marker-end="url(#arrowhead)" />
+  
+  <!-- 8. Client接收消息 -->
+  <rect x="650" y="350" width="100" height="50" rx="5" ry="5" fill="#fad8c0" stroke="#ed7d31" stroke-width="1" />
+  <text x="700" y="372" font-family="Arial" font-size="12" text-anchor="middle">Read</text>
+  <text x="700" y="388" font-family="Arial" font-size="12" text-anchor="middle">接收消息</text>
+  
+  <line x1="700" y1="400" x2="700" y2="440" stroke="#000" stroke-width="1.5" marker-end="url(#arrowhead)" />
+  
+  <!-- 9. 消息分发 -->
+  <rect x="650" y="440" width="100" height="50" rx="5" ry="5" fill="#fad8c0" stroke="#ed7d31" stroke-width="1" />
+  <text x="700" y="462" font-family="Arial" font-size="12" text-anchor="middle">识别消息</text>
+  <text x="700" y="478" font-family="Arial" font-size="12" text-anchor="middle">类型</text>
+  
+  <line x1="750" y1="465" x2="830" y2="465" stroke="#000" stroke-width="1.5" marker-end="url(#arrowhead)" />
+  
+  <!-- 10. 消息处理器处理消息 -->
+  <rect x="850" y="440" width="100" height="50" rx="5" ry="5" fill="#fff2cc" stroke="#ffc000" stroke-width="1" />
+  <text x="900" y="456" font-family="Arial" font-size="12" text-anchor="middle">JsonHandler/</text>
+  <text x="900" y="472" font-family="Arial" font-size="12" text-anchor="middle">ProtoHandler</text>
+  
+  <line x1="900" y1="490" x2="900" y2="530" stroke="#000" stroke-width="1.5" marker-end="url(#arrowhead)" />
+  
+  <!-- 11. 解析消息并分发 -->
+  <rect x="850" y="530" width="100" height="50" rx="5" ry="5" fill="#fff2cc" stroke="#ffc000" stroke-width="1" />
+  <text x="900" y="552" font-family="Arial" font-size="12" text-anchor="middle">Distribute</text>
+  <text x="900" y="568" font-family="Arial" font-size="12" text-anchor="middle">分发消息</text>
+  
+  <line x1="950" y1="555" x2="1030" y2="555" stroke="#000" stroke-width="1.5" marker-end="url(#arrowhead)" />
+  
+  <!-- 12. 路由查找处理函数 -->
+  <rect x="1050" y="530" width="100" height="50" rx="5" ry="5" fill="#e6e6e6" stroke="#a5a5a5" stroke-width="1" />
+  <text x="1100" y="552" font-family="Arial" font-size="12" text-anchor="middle">Router</text>
+  <text x="1100" y="568" font-family="Arial" font-size="12" text-anchor="middle">查找路由</text>
+  
+  <line x1="1100" y1="580" x2="1100" y2="620" stroke="#000" stroke-width="1.5" marker-end="url(#arrowhead)" />
+  
+  <!-- 13. 执行业务逻辑 -->
+  <rect x="1050" y="620" width="100" height="50" rx="5" ry="5" fill="#e6e6e6" stroke="#a5a5a5" stroke-width="1" />
+  <text x="1100" y="642" font-family="Arial" font-size="12" text-anchor="middle">执行</text>
+  <text x="1100" y="658" font-family="Arial" font-size="12" text-anchor="middle">业务逻辑</text>
+  
+  <line x1="1050" y1="645" x2="970" y2="645" stroke="#000" stroke-width="1.5" marker-end="url(#arrowhead)" />
+  
+  <!-- 14. 返回响应 -->
+  <rect x="850" y="620" width="100" height="50" rx="5" ry="5" fill="#fff2cc" stroke="#ffc000" stroke-width="1" />
+  <text x="900" y="642" font-family="Arial" font-size="12" text-anchor="middle">构建响应</text>
+  <text x="900" y="658" font-family="Arial" font-size="12" text-anchor="middle">返回消息</text>
+  
+  <line x1="850" y1="645" x2="770" y2="645" stroke="#000" stroke-width="1.5" marker-end="url(#arrowhead)" />
+  
+  <!-- 15. Client发送响应 -->
+  <rect x="650" y="620" width="100" height="50" rx="5" ry="5" fill="#fad8c0" stroke="#ed7d31" stroke-width="1" />
+  <text x="700" y="642" font-family="Arial" font-size="12" text-anchor="middle">Write</text>
+  <text x="700" y="658" font-family="Arial" font-size="12" text-anchor="middle">发送响应</text>
+  
+  <line x1="650" y1="645" x2="170" y2="645" stroke="#000" stroke-width="1.5" marker-end="url(#arrowhead)" />
+  
+  <!-- 16. 客户端接收响应 -->
+  <rect x="50" y="620" width="100" height="50" rx="5" ry="5" fill="#d6e7ff" stroke="#4472c4" stroke-width="1" />
+  <text x="100" y="642" font-family="Arial" font-size="12" text-anchor="middle">接收响应</text>
+  <text x="100" y="658" font-family="Arial" font-size="12" text-anchor="middle">处理数据</text>
+  
+  <!-- 17. 心跳检测 -->
+  <rect x="650" y="700" width="100" height="50" rx="5" ry="5" fill="#fad8c0" stroke="#ed7d31" stroke-width="1" />
+  <text x="700" y="722" font-family="Arial" font-size="12" text-anchor="middle">心跳检测</text>
+  <text x="700" y="738" font-family="Arial" font-size="12" text-anchor="middle">维持连接</text>
+  
+  <!-- 18. 发布订阅功能 -->
+  <rect x="650" y="780" width="100" height="50" rx="5" ry="5" fill="#fad8c0" stroke="#ed7d31" stroke-width="1" />
+  <text x="700" y="802" font-family="Arial" font-size="12" text-anchor="middle">发布/订阅</text>
+  <text x="700" y="818" font-family="Arial" font-size="12" text-anchor="middle">处理机制</text>
+  
+  <line x1="650" y1="805" x2="520" y2="805" stroke="#000" stroke-width="1.5" marker-end="url(#arrowhead)" />
+  
+  <!-- 19. Redis消息存储 -->
+  <rect x="450" y="780" width="50" height="50" rx="5" ry="5" fill="#d8f1cc" stroke="#70ad47" stroke-width="1" />
+  <text x="475" y="810" font-family="Arial" font-size="12" text-anchor="middle">Redis</text>
+  
+  <!-- 20. 客户端断开连接 -->
+  <rect x="50" y="780" width="100" height="50" rx="5" ry="5" fill="#d6e7ff" stroke="#4472c4" stroke-width="1" />
+  <text x="100" y="802" font-family="Arial" font-size="12" text-anchor="middle">断开连接</text>
+  <text x="100" y="818" font-family="Arial" font-size="12" text-anchor="middle">或超时</text>
+  
+  <line x1="150" y1="805" x2="430" y2="805" stroke="#000" stroke-width="1.5" marker-end="url(#arrowhead)" />
+  
+  <!-- 21. 清理客户端资源 -->
+  <rect x="450" y="700" width="100" height="50" rx="5" ry="5" fill="#d8f1cc" stroke="#70ad47" stroke-width="1" />
+  <text x="500" y="722" font-family="Arial" font-size="12" text-anchor="middle">关闭连接</text>
+  <text x="500" y="738" font-family="Arial" font-size="12" text-anchor="middle">清理资源</text>
+  
+  <line x1="475" y1="780" x2="475" y2="750" stroke="#000" stroke-width="1.5" marker-end="url(#arrowhead)" />
+</svg>
